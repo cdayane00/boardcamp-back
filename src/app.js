@@ -5,6 +5,7 @@ import chalk from "chalk";
 import categories from './routes/categoriesRouter.js';
 import jogo from "./routes/jogoRouter.js";
 import clientes from "./routes/clienteRouter.js";
+import alugueis from "./routes/aluguelRouter.js";
 
 const app = express();
 app.use(cors());
@@ -14,6 +15,8 @@ dotenv.config();
 app.use(categories);
 app.use(jogo);
 app.use(clientes);
+app.use(alugueis);
+
 
 
 app.listen(process.env.PORT, () => {
